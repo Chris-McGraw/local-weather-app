@@ -3,27 +3,86 @@
   padding: 0;
   text-decoration: none;
   cursor: default;
-  
-  /* border: 2px solid red; */
 }
 
 body {
-  /* overflow: hidden; */
   height: 100%;
   width: 100%;
   background-color: black;
+}
+
+.loading-location {
+  margin: auto;
+  color: #E5E6E9;
+  height: 45px !important;
+  width: 210px !important;
+}
+
+.loading-weather {
+  margin: auto;
+  margin-top: 3.5% !important;
+  width: 155px !important;
+  height: 35px !important;
+}
+
+.loading-img {
+  margin: auto;
+  margin-top: 1.75% !important;
+  height: 75px !important;
+  width: 75px !important;
+}
+
+.loading-temp {
+  margin: auto;
+  margin-top: 1.5% !important;
+  width: 55px !important;
+  height: 35px !important;
+  cursor: default !important;
+}
+
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -360px 0
+    }
+    100%{
+        background-position: 360px 0
+    }
+}
+
+.loading-animation {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #E5E6E9;
+    background: linear-gradient(to right, #eeeeee 8%, #bababa 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 96px;
+    position: relative;
 }
 
 .main-text {
   color: white;
   font-size: 2.5em;
   text-align: center;
-  /* margin-top: 8.5%; */
   margin-top: 3.5%;
   font-family: 'Oswald', sans-serif;
 }
 
+#make-inline {
+  display: inline-block;
+}
+
 #current-location {
+  display: inline-block;
+  margin-left: 9px;
+}
+
+#current-country {
+  display: inline-block;
+  margin-right: 9px;
 }
 
 #current-weather {
@@ -52,7 +111,6 @@ img {
   margin: auto;
   margin-top: 0.75%;
   font-family: 'Oswald', sans-serif;
-  
   width: 15%;
   cursor: pointer;
   display: none;
@@ -65,7 +123,6 @@ img {
   margin: auto;
   margin-top: 0.75%;
   font-family: 'Oswald', sans-serif;
-  
   width: 55px;
   cursor: pointer;
  /* display: none; */
@@ -76,7 +133,7 @@ img {
   height: 115px;
   margin: auto;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   box-sizing: border-box;
   margin-top: 10%;
 }
@@ -84,7 +141,6 @@ img {
 .footer i {
   color: white;
   link-style: none;
-  
   cursor: pointer;
 }
 
