@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $("#current-location").toggleClass("loading-location");
-  $("#current-weather").toggleClass("loading-weather");
-  $("#weather-icon").toggleClass("loading-img");
-  $("#current-temp-far").toggleClass("loading-temp");
+  $("#current-location").toggleClass("loading-location animated-background");
+  $("#current-weather").toggleClass("loading-weather animated-background");
+  $("#weather-icon").toggleClass("loading-img animated-background");
+  $("#current-temp-far").toggleClass("loading-temp animated-background");
 });
 
 
@@ -12,7 +12,7 @@ $(window).load(function(){
     var long = Math.round(position.coords.longitude * 100) / 100;
     $.getJSON("https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + long, function(json) {
 
-      $("#current-location").toggleClass("loading-location");
+      $("#current-location").toggleClass("loading-location animated-background");
 
       $("#current-location").html(json.name + "-");
       $("#current-country").html(json.sys.country);
@@ -29,9 +29,9 @@ $(window).load(function(){
 
       currentWeather = currentWeather.join(" ");
 
-      $("#current-weather").toggleClass("loading-weather");
-      $("#weather-icon").toggleClass("loading-img");
-      $("#current-temp-far").toggleClass("loading-temp");
+      $("#current-weather").toggleClass("loading-weather animated-background");
+      $("#weather-icon").toggleClass("loading-img animated-background");
+      $("#current-temp-far").toggleClass("loading-temp animated-background");
 
       $("#current-weather").html(currentWeather);
       $("#weather-icon").html("<img src='" + json.weather[0].icon + "'>");
